@@ -13,7 +13,7 @@
 #include <boost/graph/tree_adaptor.hpp>
 
 
-#define BOOST_TEST_DYN_LINK
+// #define BOOST_TEST_DYN_LINK
 
 #define BOOST_TEST_MODULE boost_graph_prop_maps
 #include <boost/test/unit_test.hpp>

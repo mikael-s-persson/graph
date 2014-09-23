@@ -10,7 +10,7 @@
 #include <boost/graph/adjacency_list_BC.hpp>
 
 
-#define BOOST_TEST_DYN_LINK
+// #define BOOST_TEST_DYN_LINK
 
 #define BOOST_TEST_MODULE bgl_graphs
 #include <boost/test/unit_test.hpp>

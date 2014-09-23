@@ -7,6 +7,33 @@
 
 #include <boost/variant.hpp>
 
+#include <boost/container/list.hpp>
+#include <boost/container/set.hpp>
+#include <boost/container/map.hpp>
+#include <boost/unordered_set.hpp>
+
+class some_dummy_forward_decl_type;
+
+boost::container::list<some_dummy_forward_decl_type> some_dummy_list_of_incomplete;
+boost::container::list<some_dummy_forward_decl_type>::iterator some_dummy_list_iterator_of_incomplete;
+
+boost::container::set<some_dummy_forward_decl_type> some_dummy_set_of_incomplete;
+boost::container::set<some_dummy_forward_decl_type>::iterator some_dummy_set_iterator_of_incomplete;
+
+boost::container::multiset<some_dummy_forward_decl_type> some_dummy_multiset_of_incomplete;
+boost::container::multiset<some_dummy_forward_decl_type>::iterator some_dummy_multiset_iterator_of_incomplete;
+
+boost::container::map<some_dummy_forward_decl_type,int> some_dummy_map_of_incomplete;
+boost::container::map<some_dummy_forward_decl_type,int>::iterator some_dummy_map_iterator_of_incomplete;
+
+boost::container::multimap<some_dummy_forward_decl_type,int> some_dummy_multimap_of_incomplete;
+boost::container::multimap<some_dummy_forward_decl_type,int>::iterator some_dummy_multimap_iterator_of_incomplete;
+
+boost::unordered_set<some_dummy_forward_decl_type> some_dummy_uset_of_incomplete;
+// boost::unordered_set<some_dummy_forward_decl_type>::iterator some_dummy_uset_iterator_of_incomplete;
+
+class some_dummy_forward_decl_type { };
+
 
 template <typename Container>
 void foo(Container& cont) {
@@ -92,15 +119,15 @@ int main() {
   std::cout << "Max power 7 of std::size_t: " << s_power_array<std::size_t, 7>::max_power << std::endl;
   std::cout << "Max power 8 of std::size_t: " << s_power_array<std::size_t, 8>::max_power << std::endl;
   
-  s_power_array<std::size_t, 8> powers;
-  for(auto x : powers.values)
-    std::cout << x << " ";
-  std::cout << std::endl;
-  
-  s_treesize_array<std::size_t, 8> treesizes;
-  for(auto x : treesizes.values)
-    std::cout << x << " ";
-  std::cout << std::endl;
+//   s_power_array<std::size_t, 8> powers;
+//   for(auto x : powers.values)
+//     std::cout << x << " ";
+//   std::cout << std::endl;
+//   
+//   s_treesize_array<std::size_t, 8> treesizes;
+//   for(auto x : treesizes.values)
+//     std::cout << x << " ";
+//   std::cout << std::endl;
   
   return 0;
 };

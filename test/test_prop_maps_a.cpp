@@ -10,15 +10,15 @@ template <typename VertexProp, typename EdgeProp>
 struct graphtype_list {
   
   typedef mpl::list< 
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  vecBC,  bidirectionalS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  listBC, bidirectionalS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  poolBC, bidirectionalS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  vecBC,  directedS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  listBC, directedS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  poolBC, directedS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  vecBC,  undirectedS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  listBC, undirectedS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  poolBC, undirectedS, VertexProp, EdgeProp> 
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  vecBC,  bidirectionalS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  listBC, bidirectionalS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  poolBC, bidirectionalS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  vecBC,  directedS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  listBC, directedS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  poolBC, directedS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  vecBC,  undirectedS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  listBC, undirectedS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  poolBC, undirectedS, VertexProp, EdgeProp> 
   > types;
   
 };

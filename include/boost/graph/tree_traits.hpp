@@ -88,7 +88,28 @@ struct tree_storage_traits {
   
 };
 
+template <class Tree, class TreeVisitor>
+void traverse_tree(typename graph_traits<Tree>::vertex_descriptor v,
+                    Tree& t, TreeVisitor visitor)
+{
+  visitor.preorder(v, t);
+  typename tree_traits<Tree>::child_vertex_iterator i, end;
+  boost::tie(i, end) = child_vertices(v, t);
+  if (i != end) {
+    traverse_tree(*i++, t, visitor);
+    visitor.inorder(v, t);
+    while (i != end)
+      traverse_tree(*i++, t, visitor);
+  } else
+    visitor.inorder(v, t);
+  visitor.postorder(v, t);
+}
 
+struct null_tree_visitor {
+  template <typename Node, typename Tree> void preorder(Node, Tree&) { }
+  template <typename Node, typename Tree> void inorder(Node, Tree&) { }
+  template <typename Node, typename Tree> void postorder(Node, Tree&) { }
+};
 
 
 };

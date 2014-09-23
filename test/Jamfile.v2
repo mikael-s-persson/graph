@@ -133,6 +133,56 @@ test-suite graph_test :
     [ run hawick_circuits.cpp ]
     [ run successive_shortest_path_nonnegative_weights_test.cpp ../../test/build//boost_unit_test_framework/<link>static ]
     [ run cycle_canceling_test.cpp ../../test/build//boost_unit_test_framework/<link>static ]
+    [ run test_trees_bfl.cpp ../../test/build//boost_unit_test_framework/<link>static ]
+    [ run test_trees_vebl.cpp ../../test/build//boost_unit_test_framework/<link>static ]
+    [ run test_prop_maps_bfl.cpp ../../test/build//boost_unit_test_framework/<link>static ]
+    [ run test_prop_maps_vebl.cpp ../../test/build//boost_unit_test_framework/<link>static ]
+    [ run dummy_tests.cpp ../../test/build//boost_unit_test_framework/<link>static ]
+    
+#     [ compile test_trees_t.cpp : <define>EDGE_STORAGE_TYPE=vecBC : test_trees_tvecBC ]
+    
+    [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=vecBC : test_trees_tvecBC ]
+    [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=vecBC : test_trees_avecBC ]
+    [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=vecBC : test_graphs_avecBC ]
+    [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=vecBC : test_prop_maps_tvecBC ]
+    [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=vecBC : test_prop_maps_avecBC ]
+    
+    [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=poolBC : test_trees_tpoolBC ]
+    [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=poolBC : test_trees_apoolBC ]
+    [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=poolBC : test_graphs_apoolBC ]
+    [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=poolBC : test_prop_maps_tpoolBC ]
+    [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=poolBC : test_prop_maps_apoolBC ]
+    
+#     [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_trees_tlistBC ]
+#     [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_trees_alistBC ]
+#     [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_graphs_alistBC ]
+    [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_prop_maps_tlistBC ]
+    [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_prop_maps_alistBC ]
+    
+#     [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_trees_tsetBC ]
+#     [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_trees_asetBC ]
+#     [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_graphs_asetBC ]
+    [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_prop_maps_tsetBC ]
+    [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_prop_maps_asetBC ]
+    
+    [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_setBC : test_trees_tusetBC ]
+    [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_setBC : test_trees_ausetBC ]
+    [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_setBC : test_graphs_ausetBC ]
+    [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_setBC : test_prop_maps_tusetBC ]
+    [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_setBC : test_prop_maps_ausetBC ]
+    
+#     [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_trees_tmsetBC ]
+#     [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_trees_amsetBC ]
+#     [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_graphs_amsetBC ]
+    [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_prop_maps_tmsetBC ]
+    [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_prop_maps_amsetBC ]
+    
+#     [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_trees_tumsetBC ]
+#     [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_trees_aumsetBC ]
+#     [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_graphs_aumsetBC ]
+#     [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_prop_maps_tumsetBC ]
+#     [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_prop_maps_aumsetBC ]
+    
     ;
 
 # Run SDB tests only when -sSDB= is set.

@@ -10,10 +10,10 @@ template <typename VertexProp, typename EdgeProp>
 struct graphtype_list {
   
   typedef mpl::list< 
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  listBC, bidirectionalS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  poolBC, bidirectionalS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  listBC, directedS, VertexProp, EdgeProp>,
-    adjacency_list_BC< ${EDGE_STORAGE_TYPE},  poolBC, directedS, VertexProp, EdgeProp> 
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  listBC, bidirectionalS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  poolBC, bidirectionalS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  listBC, directedS, VertexProp, EdgeProp>,
+    adjacency_list_BC< EDGE_STORAGE_TYPE,  poolBC, directedS, VertexProp, EdgeProp> 
   > types;
   
 };

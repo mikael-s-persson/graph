@@ -31,7 +31,7 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/concept_check.hpp>
 #include <boost/graph/graph_traits.hpp>
-#include <boost/graph/graph_as_tree.hpp>
+#include <boost/graph/tree_adaptor.hpp>
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/prim_minimum_spanning_tree.hpp>
 #include <boost/graph/lookup_edge.hpp>
@@ -58,7 +58,6 @@ namespace boost
     };
 
     // Tree visitor that keeps track of a preorder traversal of a tree
-    // TODO: Consider migrating this to the graph_as_tree header.
     // TODO: Parameterize the underlying stores o it doesn't have to be a vector.
     template<typename Node, typename Tree> class PreorderTraverser
     {
@@ -176,11 +175,6 @@ namespace boost
         typedef graph_traits<MSTImpl>::vertex_descriptor Vertex;
         typedef graph_traits<MSTImpl>::vertex_iterator VItr;
 
-        // And then re-cast it as a tree.
-        typedef iterator_property_map<vector<Vertex>::iterator, property_map<MSTImpl, vertex_index_t>::type> ParentMap;
-        typedef graph_as_tree<MSTImpl, ParentMap> Tree;
-        typedef tree_traits<Tree>::node_descriptor Node;
-
         // A predecessor map.
         typedef vector<GVertex> PredMap;
         typedef iterator_property_map<typename PredMap::iterator, VertexIndexMap> PredPMap;
@@ -206,19 +200,13 @@ namespace boost
             }
         }
 
-        // Build a tree abstraction over the MST.
-        vector<Vertex> parent(num_vertices(mst));
-        Tree t(mst, *vertices(mst).first,
-            make_iterator_property_map(parent.begin(),
-            get(vertex_index, mst)));
-
         // Create tour using a preorder traversal of the mst
-        vector<Node> tour;
-        PreorderTraverser<Node, Tree> tvis(tour);
-        traverse_tree(indexmap[start], t, tvis);
+        vector<Vertex> tour;
+        PreorderTraverser<Vertex, MSTImpl> tvis(tour);
+        traverse_tree(indexmap[start], mst, tvis);
 
         pair<GVItr, GVItr> g_verts(vertices(g));
-        for(PreorderTraverser<Node, Tree>::const_iterator curr(tvis.begin());
+        for(PreorderTraverser<Vertex, MSTImpl>::const_iterator curr(tvis.begin());
             curr != tvis.end(); ++curr)
         {
             // TODO: This is will be O(n^2) if vertex storage of g != vecS.

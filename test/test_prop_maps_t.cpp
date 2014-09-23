@@ -10,12 +10,12 @@ template <typename VertexProp, typename EdgeProp>
 struct graphtype_list {
   
   typedef mpl::list< 
-    linked_tree_BC< ${EDGE_STORAGE_TYPE},  vecBC,  bidirectionalS, VertexProp, EdgeProp>,
-    linked_tree_BC< ${EDGE_STORAGE_TYPE},  listBC, bidirectionalS, VertexProp, EdgeProp>,
-    linked_tree_BC< ${EDGE_STORAGE_TYPE},  poolBC, bidirectionalS, VertexProp, EdgeProp>,
-    linked_tree_BC< ${EDGE_STORAGE_TYPE},  vecBC,  directedS, VertexProp, EdgeProp>,
-    linked_tree_BC< ${EDGE_STORAGE_TYPE},  listBC, directedS, VertexProp, EdgeProp>,
-    linked_tree_BC< ${EDGE_STORAGE_TYPE},  poolBC, directedS, VertexProp, EdgeProp> 
+    linked_tree_BC< EDGE_STORAGE_TYPE,  vecBC,  bidirectionalS, VertexProp, EdgeProp>,
+//     linked_tree_BC< EDGE_STORAGE_TYPE,  listBC, bidirectionalS, VertexProp, EdgeProp>,
+    linked_tree_BC< EDGE_STORAGE_TYPE,  poolBC, bidirectionalS, VertexProp, EdgeProp>,
+    linked_tree_BC< EDGE_STORAGE_TYPE,  vecBC,  directedS, VertexProp, EdgeProp>,
+//     linked_tree_BC< EDGE_STORAGE_TYPE,  listBC, directedS, VertexProp, EdgeProp>,
+    linked_tree_BC< EDGE_STORAGE_TYPE,  poolBC, directedS, VertexProp, EdgeProp> 
   > types;
   
 };
