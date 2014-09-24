@@ -153,15 +153,15 @@ test-suite graph_test :
     [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=poolBC : test_prop_maps_tpoolBC ]
     [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=poolBC : test_prop_maps_apoolBC ]
     
-#     [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_trees_tlistBC ]
-#     [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_trees_alistBC ]
-#     [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_graphs_alistBC ]
+    [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_trees_tlistBC ]
+    [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_trees_alistBC ]
+    [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_graphs_alistBC ]
     [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_prop_maps_tlistBC ]
     [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=listBC : test_prop_maps_alistBC ]
     
-#     [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_trees_tsetBC ]
-#     [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_trees_asetBC ]
-#     [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_graphs_asetBC ]
+    [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_trees_tsetBC ]
+    [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_trees_asetBC ]
+    [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_graphs_asetBC ]
     [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_prop_maps_tsetBC ]
     [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=setBC : test_prop_maps_asetBC ]
     
@@ -171,17 +171,17 @@ test-suite graph_test :
     [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_setBC : test_prop_maps_tusetBC ]
     [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_setBC : test_prop_maps_ausetBC ]
     
-#     [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_trees_tmsetBC ]
-#     [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_trees_amsetBC ]
-#     [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_graphs_amsetBC ]
+    [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_trees_tmsetBC ]
+    [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_trees_amsetBC ]
+    [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_graphs_amsetBC ]
     [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_prop_maps_tmsetBC ]
     [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=multisetBC : test_prop_maps_amsetBC ]
     
-#     [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_trees_tumsetBC ]
-#     [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_trees_aumsetBC ]
-#     [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_graphs_aumsetBC ]
-#     [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_prop_maps_tumsetBC ]
-#     [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC) : test_prop_maps_aumsetBC ]
+    [ run test_trees_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC : test_trees_tumsetBC ]
+    [ run test_trees_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC : test_trees_aumsetBC ]
+    [ run test_graphs_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC : test_graphs_aumsetBC ]
+    [ run test_prop_maps_t.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC : test_prop_maps_tumsetBC ]
+    [ run test_prop_maps_a.cpp ../../test/build//boost_unit_test_framework/<link>static : : : <define>EDGE_STORAGE_TYPE=unordered_multisetBC : test_prop_maps_aumsetBC ]
     
     ;
 
